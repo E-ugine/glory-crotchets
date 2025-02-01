@@ -25,7 +25,7 @@ const Navbar = () => {
         </button>
 
         {/* Center - Navigation Links (Hidden on Mobile) */}
-        <ul className={`md:flex md:space-x-6 text-gray-600 absolute md:relative bg-white w-full md:w-auto left-0 top-14 md:top-0 p-5 md:p-0 shadow-md md:shadow-none transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
+        <ul className={`md:flex md:space-x-8 text-gray-600 absolute md:relative bg-white w-full md:w-auto left-0 top-14 md:top-0 p-5 md:p-0 shadow-md md:shadow-none transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
           <li className="flex items-center space-x-1 cursor-pointer hover:text-black">
             <Home size={18} />
             <span>Home</span>
