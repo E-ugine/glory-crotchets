@@ -39,6 +39,10 @@ const Navbar = () => {
             <span>Orders</span>
           </li>
           <li className="flex items-center space-x-1 cursor-pointer hover:text-black">
+            <Package size={18} />
+            <span>Products</span>
+          </li>
+          <li className="flex items-center space-x-1 cursor-pointer hover:text-black">
             <Star size={18} />
             <span>Reviews</span>
           </li>
