@@ -34,18 +34,6 @@ const Navbar = () => {
             <Package size={18} />
             <span>Shop</span>
           </li>
-          <li className="flex items-center space-x-1 cursor-pointer hover:text-black">
-            <Truck size={18} />
-            <span>Orders</span>
-          </li>
-          <li className="flex items-center space-x-1 cursor-pointer hover:text-black">
-            <Package size={18} />
-            <span>Products</span>
-          </li>
-          <li className="flex items-center space-x-1 cursor-pointer hover:text-black">
-            <Star size={18} />
-            <span>Reviews</span>
-          </li>
         </ul>
 
         {/* Right - Search Bar, Cart, Profile */}
