@@ -12,7 +12,7 @@ export default function Products(){
         <div>
             <span className="flex items-center justify-center font-medium text-2xl text-sky-500 p-8">Featured Collections</span>
             <ProdutsCard products={products}/>
-            <span className="flex items-center justify-center font-medium text-2xl text-sky-500 p-8" >Shop By Category</span>
+            <span className="flex items-center justify-center font-medium text-2xl text-sky-500 p-8 bg-[#eeecec]" >Shop By Category</span>
         </div>
     )
 }
