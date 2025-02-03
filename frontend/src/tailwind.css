@@ -592,7 +592,7 @@ video {
 
 .image-grid-wrapper {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   overflow-y: hidden;
   --x-offset: -50px;
   --y-offset: -50px;

@@ -10,7 +10,7 @@ export default function Products(){
     },[]);
     return (
         <div>
-            <span className="flex items-center justify-center font-medium text-2xl text-sky-500">Featured Collections</span>
+            <span className="flex items-center justify-center font-medium text-2xl text-sky-500 p-8">Featured Collections</span>
             <ProdutsCard products={products}/>
         </div>
     )
