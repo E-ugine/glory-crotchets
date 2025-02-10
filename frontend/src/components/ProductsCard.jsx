@@ -36,7 +36,7 @@ export default function ProductsCard({ products }) {
               <button 
                 className="bg-yellow-600 text-white text-xs px-3 py-1 rounded-md shadow-md hover:bg-yellow-700"
                 onClick={(e) => {
-                  e.stopPropagation(); // Prevent navigation when clicking the button
+                  e.stopPropagation(); 
                   console.log("Added to cart:", product.id);
                 }}
               >

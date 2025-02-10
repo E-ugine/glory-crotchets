@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const ProductDetail = () => {
-  const { id } = useParams(); // Get product ID from URL
+  const { id } = useParams(); 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -33,16 +33,16 @@ const ProductDetail = () => {
       <div className="grid gap-4 lg:col-span-2 lg:sticky lg:top-0">
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-1">
           <img
-            src={product.image}
-            alt={product.title}
-            className="w-full rounded-xl"
+            src={product?.image || "/placeholder.jpg"}
+            alt={product?.title || "Product Image"}
+            className="w-full rounded-xl object-cover"
           />
         </div>
       </div>
 
       {/* Product Details */}
       <div className="lg:col-span-3">
-        <h1 className="text-2xl font-bold">{product.title}</h1>
+        <h1 className="text-2xl font-bold">{product?.title || "Unknown Product"}</h1>
         <div className="mt-2 flex items-center gap-2">
           <div className="flex text-yellow-400">
             <span>&#9733;</span>
@@ -57,12 +57,14 @@ const ProductDetail = () => {
           </a>
         </div>
 
-        <p className="mt-4 text-gray-500">{product.description}</p>
+        <p className="mt-4 text-gray-500">{product?.description || "No description available."}</p>
 
         <div className="mt-4 flex items-center gap-2">
-          <span className="text-xl font-bold">${product.price}</span>
+          <span className="text-xl font-bold">
+            ${typeof product?.price === "number" ? product.price.toFixed(2) : "N/A"}
+          </span>
           <span className="text-sm text-gray-500 line-through">
-            ${product.price * 1.2}
+            ${typeof product?.price === "number" ? (product.price * 1.2).toFixed(2) : "N/A"}
           </span>
         </div>
 
@@ -82,7 +84,7 @@ const ProductDetail = () => {
             <summary className="cursor-pointer text-lg font-semibold">
               Product Information
             </summary>
-            <p className="mt-2 text-gray-500">{product.details}</p>
+            <p className="mt-2 text-gray-500">{product?.details || "No additional details available."}</p>
           </details>
         </div>
       </div>
