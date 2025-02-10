@@ -1,9 +1,19 @@
 import { useState } from "react";
-import { ShoppingCart, User, Home, Package, Truck, Star, Menu, X } from "lucide-react";
+import { ShoppingCart, User, Home, Package, Menu, X, Search } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [cartCount] = useState(3);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleShopClick = () => {
+    navigate("/products");
+  };
+
+  const handleHomeClick = () => {
+    navigate("/");
+  };
 
   return (
     <nav className="bg-white shadow-md px-8 py-3">
@@ -25,14 +35,14 @@ const Navbar = () => {
         </button>
 
         {/* Center - Navigation Links (Hidden on Mobile) */}
-        <ul className={`md:flex md:space-x-8 text-gray-600 absolute md:relative bg-white w-full md:w-auto left-0 top-14 md:top-0 p-5 md:p-0 shadow-md md:shadow-none transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
+        <ul className={`md:flex md:space-x-8 text-gray-600 absolute md:relative bg-white w-full md:w-auto left-0 top-14 md:top-0 p-5 md:p-0 shadow-md md:shadow-none transition-all duration-300 z-50 ${isOpen ? "block" : "hidden"}`}>
           <li className="flex items-center space-x-1 cursor-pointer hover:text-black">
             <Home size={18} />
-            <span>Home</span>
+            <button onClick={handleHomeClick} >Home</button>
           </li>
           <li className="flex items-center space-x-1 cursor-pointer hover:text-black">
             <Package size={18} />
-            <span>Shop</span>
+            <button onClick={handleShopClick}>Shop</button>
           </li>
         </ul>
 
@@ -43,11 +53,9 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search products..."
-              className="pl-10 pr-3 py-2 bg-gray-100 rounded-full outline-none w-60"
+              className="pl-9 pr-3 py-2 bg-gray-100 rounded-full outline-none w-60"
             />
-            <span className="absolute left-3 top-2.5 text-gray-500">
-              🔍
-            </span>
+            <Search size={18} className="absolute left-3 top-2.5 text-gray-500" />
           </div>
 
           {/* Cart Icon with Black Background */}
