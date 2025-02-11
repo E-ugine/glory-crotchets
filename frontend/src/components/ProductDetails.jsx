@@ -8,16 +8,14 @@ const ProductDetail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   
-  // Get product data from Redux store
-  const product = useSelector((state) => state.products.items.find(p => p.id === Number(id)));
+  // Get product from Redux store (updated)
+  const product = useSelector((state) => state.products.product);
   const loading = useSelector((state) => state.products.loading);
   const error = useSelector((state) => state.products.error);
 
   useEffect(() => {
-    if (!product) {
-      dispatch(fetchProduct(id));
-    }
-  }, [id, dispatch, product]);
+    dispatch(fetchProduct(id)); // Fetch single product
+  }, [id, dispatch]);
 
   if (loading) return <div className="text-center text-gray-700 text-lg">Loading product details...</div>;
   if (error) return <div className="text-center text-red-500 text-lg">{error}</div>;

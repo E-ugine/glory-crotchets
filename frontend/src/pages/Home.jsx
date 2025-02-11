@@ -11,7 +11,6 @@ export default function Home(){
         <Products />
         <Services />
         <Reviews />
-        <Reviews />
         <Footer />
         </>
     )
