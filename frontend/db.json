@@ -86,6 +86,7 @@
           "id": 201,
           "product_id": 1,
           "customer_name": "Alice Johnson",
+          "image": "https://i.pinimg.com/736x/24/77/4a/24774aa16ced7cb60f5d8c715c7537cf.jpg",
           "rating": 5,
           "comment": "Absolutely love this sweater! So cozy and stylish.",
           "date": "2024-01-01"
@@ -94,6 +95,7 @@
           "id": 202,
           "product_id": 2,
           "customer_name": "Bob Williams",
+          "image": "https://i.pinimg.com/736x/bb/db/4e/bbdb4e736c89707886eb0d0b10ff1f1e.jpg",
           "rating": 4,
           "comment": "Great beanie, but I wish it came in more colors.",
           "date": "2024-01-05"
@@ -102,6 +104,7 @@
           "id": 203,
           "product_id": 3,
           "customer_name": "Sarah Lee",
+          "image": "https://i.pinimg.com/736x/97/69/fd/9769fd2deeca9a44266a06f8c3ec48f9.jpg",
           "rating": 5,
           "comment": "The tote bag is amazing! Perfect size and high quality.",
           "date": "2024-01-10"

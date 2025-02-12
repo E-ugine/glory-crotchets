@@ -10,7 +10,7 @@ export default function ProductsCard({ products }) {
         // Get the first image or a placeholder
         const productImage = product.images && product.images.length > 0 
           ? product.images[0] 
-          : "/placeholder.jpg"; // Fallback image
+          : "/placeholder.jpg";
 
         return (
           <motion.div
@@ -26,7 +26,7 @@ export default function ProductsCard({ products }) {
           >
             {/* Product Image */}
             <motion.img
-              className="w-full h-48 object-cover rounded-md transition-transform duration-300 hover:scale-105"
+              className="w-full h-48 object-contain rounded-md transition-transform duration-300 hover:scale-105"
               src={productImage}
               alt={product.title || "Product Image"}
               initial={{ opacity: 0.7 }}
@@ -36,16 +36,16 @@ export default function ProductsCard({ products }) {
 
             {/* Product Details */}
             <div className="mt-4">
-              <h2 className="text-lg font-medium text-gray-900">{product.title || "Unknown Product"}</h2>
+              <h2 className="text-lg font-medium text-gray-900">{product.name || "Unknown Product"}</h2>
               <p className="mt-1 text-gray-600 text-sm line-clamp-2">{product.description || "No description available."}</p>
-              <span className="block mt-2 text-sm font-semibold text-red-500">
+              <span className="block mt-2 text-sm font-semibold text-green-500">
                 ${product.price?.toFixed(2) || "N/A"}
               </span>
 
               {/* Add to Cart Button */}
               <div className="flex justify-end mt-3">
                 <button 
-                  className="bg-yellow-600 text-white text-xs px-3 py-1 rounded-md shadow-md hover:bg-yellow-700"
+                  className="bg-sky-500 text-white text-xs px-3 py-1 rounded-md shadow-md hover:bg-sky-300"
                   onClick={(e) => {
                     e.stopPropagation(); 
                     console.log("Added to cart:", product.id);
