@@ -563,16 +563,17 @@ video {
 /*Hero section*/
 
 body {
-  background-color: #d9d9d9;
+  background-color: #eeecec;
  
 }
 
 .spread-container {
   position: relative;
-  height: 600px;
+  height: 100%;
   max-width: 800px;
   margin: 0 auto;
-  /* border: 1px solid black; */
+ 
+
 }
 .middle-content {
   position: absolute;
@@ -625,18 +626,16 @@ body {
   object-fit: cover;
   border-radius: 5px;
   position: absolute;
-  border: 2px solid #333;
   filter: grayscale(1);
   transition: filter 400ms;
   animation: spread-images 1000ms 200ms forwards;
-  top: 40%;
+  top: calc(50% + 40px);
   left: 40%;
   --x-offset: 50px;
-  /* margin: auto; */
 }
 
 .spread-container img:nth-of-type(1) {
-  --top: 0;
+  --top: -120px;
   --left: calc(var(--x-offset) * 2);
 }
 .spread-container img:nth-of-type(2) {
@@ -652,7 +651,7 @@ body {
   --left: calc(var(--x-offset) * 2);
 }
 .spread-container img:nth-of-type(5) {
-  --top: 0;
+  --top: -120px;
   --left: calc(100% - var(--x-offset) * 2 - var(--img-width));
 }
 .spread-container img:nth-of-type(6) {
@@ -670,9 +669,10 @@ body {
 
 @keyframes spread-images {
   to {
-    top: var(--top);
+    top: calc(var(--top) + 170px);
     left: var(--left);
   }
 }
+
 
 
