@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md px-8 py-3">
+    <nav className="bg-[#eeecec] shadow-md px-8 py-3">
       <div className="flex items-center justify-between">
         {/* Left - Logo */}
         <div className="flex items-center space-x-2 cursor-pointer">
@@ -35,7 +35,7 @@ const Navbar = () => {
         </button>
 
         {/* Center - Navigation Links (Hidden on Mobile) */}
-        <ul className={`md:flex md:space-x-8 text-gray-600 absolute md:relative bg-white w-full md:w-auto left-0 top-14 md:top-0 p-5 md:p-0 shadow-md md:shadow-none transition-all duration-300 z-50 ${isOpen ? "block" : "hidden"}`}>
+        <ul className={`md:flex md:space-x-8 text-gray-600 absolute md:relative  w-full md:w-auto left-0 top-14 md:top-0 p-5 md:p-0 shadow-md md:shadow-none transition-all duration-300 z-50 ${isOpen ? "block" : "hidden"}`}>
           <li className="flex items-center space-x-1 cursor-pointer hover:text-black">
             <Home size={18} />
             <button onClick={handleHomeClick} >Home</button>
