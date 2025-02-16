@@ -6,10 +6,10 @@
           "description": "A cozy handmade sweater with intricate crochet patterns.",
           "price": 45.99,
           "images": [
-              "https://i.pinimg.com/736x/5f/e0/df/5fe0df9afdfe3eef048fb82f1a04d08c.jpg",
-              "https://i.pinimg.com/736x/6b/2c/3b/6b2c3bcbb6f92d237362cb6caa5f388e.jpg",
-              "https://i.pinimg.com/736x/6b/2c/3b/6b2c3bcbb6f92d237362cb6caa5f388e.jpg",
-              "https://i.pinimg.com/736x/6b/2c/3b/6b2c3bcbb6f92d237362cb6caa5f388e.jpg"
+              "https://i.pinimg.com/736x/76/2c/05/762c05cee6895be8be70168990aa812a.jpg",
+              "https://i.pinimg.com/736x/76/2c/05/762c05cee6895be8be70168990aa812a.jpg",
+              "https://i.pinimg.com/736x/76/2c/05/762c05cee6895be8be70168990aa812a.jpg",
+              "https://i.pinimg.com/736x/76/2c/05/762c05cee6895be8be70168990aa812a.jpg"
           ],
           "category": "Clothing",
           "featured": true,
@@ -23,10 +23,10 @@
           "description": "A warm, stylish beanie perfect for winter.",
           "price": 15.99,
           "images": [
-              "https://i.pinimg.com/736x/66/ac/72/66ac72e1f996d890da94d81b58c987e5.jpg",
-              "https://i.pinimg.com/736x/b2/c3/d4/b2c3d4e5f67890ab.jpg",
-              "https://i.pinimg.com/736x/e5/f6/g7/e5f6g7h8i9j0klmn.jpg",
-              "https://i.pinimg.com/736x/h8/i9/j0/h8i9j0klmnopqrst.jpg"
+              "https://i.pinimg.com/736x/ac/b9/1c/acb91c28f846f880c3efd413f2868298.jpg",
+              "https://i.pinimg.com/736x/ac/b9/1c/acb91c28f846f880c3efd413f2868298.jpg",
+              "https://i.pinimg.com/736x/ac/b9/1c/acb91c28f846f880c3efd413f2868298.jpg",
+              "https://i.pinimg.com/736x/ac/b9/1c/acb91c28f846f880c3efd413f2868298.jpg"
           ],
           "category": "Accessories",
           "featured": true,
@@ -40,16 +40,169 @@
           "description": "A trendy, eco-friendly crochet tote bag.",
           "price": 30.00,
           "images": [
-              "https://i.pinimg.com/736x/03/fc/0e/03fc0ebbd6aaba5e32388bff29567d73.jpg",
-              "https://i.pinimg.com/736x/c3/d4/e5/c3d4e5f67890abcd.jpg",
-              "https://i.pinimg.com/736x/f6/g7/h8/f6g7h8i9j0klmnop.jpg",
-              "https://i.pinimg.com/736x/i9/j0/k1/i9j0k1lmnopqrst.jpg"
+              "https://i.pinimg.com/736x/12/55/21/12552106eec4f5e112d6c65613eafb1c.jpg",
+              "https://i.pinimg.com/736x/12/55/21/12552106eec4f5e112d6c65613eafb1c.jpg",
+              "https://i.pinimg.com/736x/12/55/21/12552106eec4f5e112d6c65613eafb1c.jpg",
+              "https://i.pinimg.com/736x/12/55/21/12552106eec4f5e112d6c65613eafb1c.jpg"
           ],
           "category": "Bags",
           "featured": false,
           "best_seller": true,
           "new_arrival": true,
           "stock": 15
+      },
+      {
+        "id": 4,
+        "name": "Leather Crossbody Bag",
+        "description": "A stylish leather crossbody bag, perfect for daily use.",
+        "price": 55.00,
+        "images": [
+          "https://i.pinimg.com/736x/af/48/a6/af48a6a9f48c9f1c0512e50029ac4c31.jpg",
+          "https://i.pinimg.com/736x/af/48/a6/af48a6a9f48c9f1c0512e50029ac4c31.jpg",
+          "https://i.pinimg.com/736x/af/48/a6/af48a6a9f48c9f1c0512e50029ac4c31.jpg",
+          "https://i.pinimg.com/736x/af/48/a6/af48a6a9f48c9f1c0512e50029ac4c31.jpg"
+        ],
+        "category": "Bags",
+        "featured": true,
+        "best_seller": false,
+        "new_arrival": false,
+        "stock": 10
+      },
+      {
+        "id": 5,
+        "name": "Vintage Denim Jacket",
+        "description": "A classic vintage denim jacket with a relaxed fit.",
+        "price": 75.00,
+        "images": [
+          "https://i.pinimg.com/736x/70/d7/6a/70d76a83c81ea41a82a60dcdfabce16b.jpg",
+          "https://i.pinimg.com/736x/70/d7/6a/70d76a83c81ea41a82a60dcdfabce16b.jpg",
+          "https://i.pinimg.com/736x/70/d7/6a/70d76a83c81ea41a82a60dcdfabce16b.jpg",
+          "https://i.pinimg.com/736x/70/d7/6a/70d76a83c81ea41a82a60dcdfabce16b.jpg"
+        ],
+        "category": "Clothing",
+        "featured": false,
+        "best_seller": true,
+        "new_arrival": true,
+        "stock": 20
+      },
+      {
+        "id": 6,
+        "name": "Handmade Beaded Necklace",
+        "description": "An elegant handmade beaded necklace with vibrant colors.",
+        "price": 40.00,
+        "images": [
+          "https://i.pinimg.com/736x/91/10/9e/91109ed5f7423fb907286bd146109c10.jpg",
+          "https://i.pinimg.com/736x/91/10/9e/91109ed5f7423fb907286bd146109c10.jpg",
+          "https://i.pinimg.com/736x/91/10/9e/91109ed5f7423fb907286bd146109c10.jpg",
+          "https://i.pinimg.com/736x/91/10/9e/91109ed5f7423fb907286bd146109c10.jpg"
+        ],
+        "category": "Jewelry",
+        "featured": true,
+        "best_seller": false,
+        "new_arrival": false,
+        "stock": 25
+      },
+      {
+        "id": 7,
+        "name": "Cozy Wool Sweater",
+        "description": "A soft and cozy wool sweater, perfect for chilly days.",
+        "price": 65.00,
+        "images": [
+          "https://i.pinimg.com/736x/a1/c3/37/a1c3371d28b8aff8363642b55f3f0f4b.jpg",
+          "https://i.pinimg.com/736x/a1/c3/37/a1c3371d28b8aff8363642b55f3f0f4b.jpg",
+          "https://i.pinimg.com/736x/a1/c3/37/a1c3371d28b8aff8363642b55f3f0f4b.jpg",
+          "https://i.pinimg.com/736x/a1/c3/37/a1c3371d28b8aff8363642b55f3f0f4b.jpg"
+        ],
+        "category": "Clothing",
+        "featured": false,
+        "best_seller": true,
+        "new_arrival": true,
+        "stock": 18
+      },
+      {
+        "id": 8,
+        "name": "Boho Patterned Scarf",
+        "description": "A lightweight bohemian scarf with beautiful patterns.",
+        "price": 25.00,
+        "images": [
+          "https://i.pinimg.com/736x/27/0a/7a/270a7acd87717ce67d26a24f2e69fa8e.jpg",
+          "https://i.pinimg.com/736x/27/0a/7a/270a7acd87717ce67d26a24f2e69fa8e.jpg",
+          "https://i.pinimg.com/736x/27/0a/7a/270a7acd87717ce67d26a24f2e69fa8e.jpg",
+          "https://i.pinimg.com/736x/27/0a/7a/270a7acd87717ce67d26a24f2e69fa8e.jpg"
+        ],
+        "category": "Accessories",
+        "featured": true,
+        "best_seller": false,
+        "new_arrival": false,
+        "stock": 30
+      },
+      {
+        "id": 9,
+        "name": "Minimalist Gold Bracelet",
+        "description": "A sleek and simple gold bracelet for everyday wear.",
+        "price": 35.00,
+        "images": [
+          "https://i.pinimg.com/736x/61/ab/ae/61abaeb5ea28a4e311b1c08531510d41.jpg",
+          "https://i.pinimg.com/736x/61/ab/ae/61abaeb5ea28a4e311b1c08531510d41.jpg",
+          "https://i.pinimg.com/736x/61/ab/ae/61abaeb5ea28a4e311b1c08531510d41.jpg",
+          "https://i.pinimg.com/736x/61/ab/ae/61abaeb5ea28a4e311b1c08531510d41.jpg"
+        ],
+        "category": "Jewelry",
+        "featured": false,
+        "best_seller": true,
+        "new_arrival": false,
+        "stock": 22
+      },
+      {
+        "id": 10,
+        "name": "Handwoven Straw Hat",
+        "description": "A stylish handwoven straw hat for sunny days.",
+        "price": 28.00,
+        "images": [
+          "https://i.pinimg.com/736x/f6/46/aa/f646aae024739b3538a03d50e0b95ffa.jpg",
+          "https://i.pinimg.com/736x/f6/46/aa/f646aae024739b3538a03d50e0b95ffa.jpg",
+          "https://i.pinimg.com/736x/f6/46/aa/f646aae024739b3538a03d50e0b95ffa.jpg",
+          "https://i.pinimg.com/736x/f6/46/aa/f646aae024739b3538a03d50e0b95ffa.jpg"
+        ],
+        "category": "Accessories",
+        "featured": true,
+        "best_seller": false,
+        "new_arrival": true,
+        "stock": 16
+      },
+      {
+        "id": 11,
+        "name": "Classic Leather Wallet",
+        "description": "A premium leather wallet with multiple compartments.",
+        "price": 50.00,
+        "images": [
+          "https://i.pinimg.com/736x/b9/88/3a/b9883a5d316ab0f2703b08cb8ef7c659.jpg",
+          "https://i.pinimg.com/736x/b9/88/3a/b9883a5d316ab0f2703b08cb8ef7c659.jpg",
+          "https://i.pinimg.com/736x/b9/88/3a/b9883a5d316ab0f2703b08cb8ef7c659.jpg",
+          "https://i.pinimg.com/736x/b9/88/3a/b9883a5d316ab0f2703b08cb8ef7c659.jpg"
+        ],
+        "category": "Accessories",
+        "featured": false,
+        "best_seller": true,
+        "new_arrival": false,
+        "stock": 12
+      },
+      {
+        "id": 12,
+        "name": "Embroidered Maxi Dress",
+        "description": "A beautifully embroidered maxi dress with floral patterns.",
+        "price": 85.00,
+        "images": [
+          "https://i.pinimg.com/736x/36/6b/7b/366b7b37a74ae311c795fbe8b4aaf66a.jpg",
+          "https://i.pinimg.com/736x/36/6b/7b/366b7b37a74ae311c795fbe8b4aaf66a.jpg",
+          "https://i.pinimg.com/736x/36/6b/7b/366b7b37a74ae311c795fbe8b4aaf66a.jpg",
+          "https://i.pinimg.com/736x/36/6b/7b/366b7b37a74ae311c795fbe8b4aaf66a.jpg"
+        ],
+        "category": "Clothing",
+        "featured": true,
+        "best_seller": false,
+        "new_arrival": true,
+        "stock": 8
       }
   ],
   "orders": [

@@ -18,7 +18,6 @@ const Products = () => {
 
   return (
     <div>
-      <span className="flex items-center justify-center font-medium text-2xl text-sky-500 p-8">Featured Collections</span>
       <ProductsCard products={products} />
     </div>
   );
