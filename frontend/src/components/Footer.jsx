@@ -1,263 +1,139 @@
 export default function Footer(){
     return(
-        <div className="relative mt-16 bg-[#eeecec]">
-      <svg
-        className="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400"
-        preserveAspectRatio="none"
-        viewBox="0 0 1440 54"
-      >
-        <path
-          fill="#eeecec"
-          d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
-        />
-      </svg>
-      <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
-          <div className="md:max-w-md lg:col-span-2">
-            <a
-              href="/"
-              aria-label="Go home"
-              title="Company"
-              className="inline-flex items-center"
-            >
-              <svg
-                className="w-8 text-teal-accent-400"
-                viewBox="0 0 24 24"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                stroke="currentColor"
-                fill="none"
-              >
-                <rect x="3" y="1" width="7" height="12" />
-                <rect x="3" y="17" width="7" height="6" />
-                <rect x="14" y="1" width="7" height="6" />
-                <rect x="14" y="11" width="7" height="12" />
-              </svg>
-              <span className="ml-2 text-xl font-bold tracking-wide text-yellow-700 uppercase">
-                Glory Crotchet
-              </span>
-            </a>
-            <div className="mt-4 lg:max-w-sm">
-              <p className="text-sm text-yellow-700">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
-              </p>
-              <p className="mt-4 text-sm text-yellow-700">
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.
-              </p>
-            </div>
+      <footer className="font-sans tracking-wide bg-[#eeecec] px-10 pt-12 pb-6">
+      <div className="flex flex-wrap justify-between gap-10">
+        <div className="max-w-md">
+          <a href='javascript:void(0)'>
+            <img src="https://readymadeui.com/readymadeui.svg" alt="logo" className='w-36' />
+          </a>
+          <div className="mt-6">
+            <p className="text-gray-600 leading-relaxed text-sm">Glory Crochet is a handmade crochet brand specializing in unique, high-quality, and stylish crochet designs, including clothing, accessories, and home décor. The craftsmanship blends creativity with tradition,
+               offering beautifully crafted pieces for all occasions.</p>
           </div>
-          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
-            <div>
-              <p className="font-semibold tracking-wide text-red-700">
-                Category
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    News
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    World
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Games
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    References
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-yellow-700">
-                Cherry
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Web
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    eCommerce
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Business
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Entertainment
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Portfolio
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-red-700">
-                Apples
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Media
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Brochure
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Nonprofit
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Educational
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Projects
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-red-700">
-                Business
-              </p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Infopreneur
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Personal
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Wiki
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-deep-purple-50 hover:text-teal-accent-400"
-                  >
-                    Forum
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <ul className="mt-10 flex space-x-5">
+            <li>
+              <a href='javascript:void(0)'>
+                <svg xmlns="http://www.w3.org/2000/svg" className="fill-blue-600 w-8 h-8" viewBox="0 0 49.652 49.652">
+                  <path d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zM31 25.7h-4.039v14.396h-5.985V25.7h-2.845v-5.088h2.845v-3.291c0-2.357 1.12-6.04 6.04-6.04l4.435.017v4.939h-3.219c-.524 0-1.269.262-1.269 1.386v2.99h4.56z" data-original="#000000" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href='javascript:void(0)'>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 112.196 112.196">
+                  <circle cx="56.098" cy="56.097" r="56.098" fill="#007ab9" data-original="#007ab9" />
+                  <path fill="#fff" d="M89.616 60.611v23.128H76.207V62.161c0-5.418-1.936-9.118-6.791-9.118-3.705 0-5.906 2.491-6.878 4.903-.353.862-.444 2.059-.444 3.268v22.524h-13.41s.18-36.546 0-40.329h13.411v5.715c-.027.045-.065.089-.089.132h.089v-.132c1.782-2.742 4.96-6.662 12.085-6.662 8.822 0 15.436 5.764 15.436 18.149zm-54.96-36.642c-4.587 0-7.588 3.011-7.588 6.967 0 3.872 2.914 6.97 7.412 6.97h.087c4.677 0 7.585-3.098 7.585-6.97-.089-3.956-2.908-6.967-7.496-6.967zm-6.791 59.77H41.27v-40.33H27.865v40.33z" data-original="#f1f2f2" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href='javascript:void(0)'>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 152 152">
+                  <linearGradient id="a" x1="22.26" x2="129.74" y1="22.26" y2="129.74" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stopColor="#fae100" />
+                    <stop offset=".15" stopColor="#fcb720" />
+                    <stop offset=".3" stopColor="#ff7950" />
+                    <stop offset=".5" stopColor="#ff1c74" />
+                    <stop offset="1" stopColor="#6c1cd1" />
+                  </linearGradient>
+                  <g data-name="Layer 2">
+                    <g data-name="03.Instagram">
+                      <rect width="152" height="152" fill="url(#a)" data-original="url(#a)" rx="76" />
+                      <g fill="#fff">
+                        <path fill="#ffffff10" d="M133.2 26c-11.08 20.34-26.75 41.32-46.33 60.9S46.31 122.12 26 133.2q-1.91-1.66-3.71-3.46A76 76 0 1 1 129.74 22.26q1.8 1.8 3.46 3.74z" data-original="#ffffff10" />
+                        <path d="M94 36H58a22 22 0 0 0-22 22v36a22 22 0 0 0 22 22h36a22 22 0 0 0 22-22V58a22 22 0 0 0-22-22zm15 54.84A18.16 18.16 0 0 1 90.84 109H61.16A18.16 18.16 0 0 1 43 90.84V61.16A18.16 18.16 0 0 1 61.16 43h29.68A18.16 18.16 0 0 1 109 61.16z" data-original="#ffffff" />
+                        <path d="m90.59 61.56-.19-.19-.16-.16A20.16 20.16 0 0 0 76 55.33 20.52 20.52 0 0 0 55.62 76a20.75 20.75 0 0 0 6 14.61 20.19 20.19 0 0 0 14.42 6 20.73 20.73 0 0 0 14.55-35.05zM76 89.56A13.56 13.56 0 1 1 89.37 76 13.46 13.46 0 0 1 76 89.56zm26.43-35.18a4.88 4.88 0 0 1-4.85 4.92 4.81 4.81 0 0 1-3.42-1.43 4.93 4.93 0 0 1 3.43-8.39 4.82 4.82 0 0 1 3.09 1.12l.1.1a3.05 3.05 0 0 1 .44.44l.11.12a4.92 4.92 0 0 1 1.1 3.12z" data-original="#ffffff" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href='javascript:void(0)'>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 1227 1227">
+                  <path d="M613.5 0C274.685 0 0 274.685 0 613.5S274.685 1227 613.5 1227 1227 952.315 1227 613.5 952.315 0 613.5 0z" data-original="#000000" />
+                  <path fill="#fff" d="m680.617 557.98 262.632-305.288h-62.235L652.97 517.77 470.833 252.692H260.759l275.427 400.844-275.427 320.142h62.239l240.82-279.931 192.35 279.931h210.074L680.601 557.98zM345.423 299.545h95.595l440.024 629.411h-95.595z" data-original="#ffffff" />
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
-          <p className="text-sm text-sky-500">
-            © Copyright 2020 Lorem Inc. All rights reserved.
-          </p>
-          <div className="flex items-center mt-4 space-x-4 sm:mt-0">
-            <a
-              href="/"
-              className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-                <path d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z" />
-              </svg>
-            </a>
-            <a
-              href="/"
-              className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
-            >
-              <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
-                <circle cx="15" cy="15" r="4" />
-                <path d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z" />
-              </svg>
-            </a>
-            <a
-              href="/"
-              className="transition-colors duration-300 text-deep-purple-100 hover:text-teal-accent-400"
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-                <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
-              </svg>
-            </a>
-          </div>
+
+        <div className="max-lg:min-w-[140px]">
+          <h4 className="text-sky-500 font-semibold text-base relative max-sm:cursor-pointer">Services</h4>
+
+          <ul className="mt-6 space-y-4">
+            <li>
+              <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>Pricing</a>
+            </li>
+            <li>
+              <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>Support</a>
+            </li>
+            <li>
+              <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>Client Portal</a>
+            </li>
+            <li>
+              <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>Resources</a>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <div className="max-lg:min-w-[140px]">
+          <h4 className="text-sky-500 font-semibold text-base relative max-sm:cursor-pointer">Company</h4>
+
+          <ul className="space-y-4 mt-6">
+            <li>
+              <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>About us</a>
+            </li>
+            <li>
+              <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>Blog</a>
+            </li>
+            <li>
+              <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>Portfolio</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="max-lg:min-w-[140px]">
+          <h4 className="text-sky-500 font-semibold text-base relative max-sm:cursor-pointer">Additional</h4>
+
+          <ul className="space-y-4 mt-6">
+            <li>
+              <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>FAQ</a>
+            </li>
+            <li>
+              <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>Partners</a>
+            </li>
+            <li>
+              <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>Contact</a>
+            </li>
+            <li>
+              <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>News</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+
+      <hr className="mt-10 mb-6 border-gray-300" />
+
+      <div className="flex flex-wrap max-md:flex-col gap-4">
+        <ul className="md:flex md:space-x-6 max-md:space-y-2">
+          <li>
+            <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>Terms of Service</a>
+          </li>
+          <li>
+            <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>Privacy Policy</a>
+          </li>
+          <li>
+            <a href='javascript:void(0)' className='hover:text-gray-800 text-gray-600 text-sm'>Security</a>
+          </li>
+        </ul>
+
+        <p className='text-gray-600 text-sm md:ml-auto'>© GloryCrotchets. All rights reserved.</p>
+      </div>
+    </footer>
     )
 }

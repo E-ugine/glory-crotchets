@@ -5,7 +5,7 @@ export default function Hero(){
   <div className="middle-content">
       <h1>GLORY CROTCHET</h1>
       <p className="tagline">Celebrating your looks with you</p>
-      <a href="#">Explore Site</a>
+      <a href="/products">Explore Products</a>
   </div>
 
   <img

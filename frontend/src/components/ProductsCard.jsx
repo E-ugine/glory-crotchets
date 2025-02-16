@@ -1,9 +1,6 @@
 export default function ProductsCard({ products }) {
   return (
-    <div className="font-[sans-serif] bg-white p-4 mx-auto max-w-[1400px]">
-      <h2 className="text-xl sm:text-3xl font-extrabold text-gray-800 mb-6 sm:mb-8">
-        Premium Threads
-      </h2>
+    <div className="font-[sans-serif] bg-[#eeecec] p-4 mx-auto w-full h-full max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%] 2xl:max-w-[70%]">
       
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         {products.map((product) => (
@@ -35,7 +32,7 @@ export default function ProductsCard({ products }) {
                 </button>
               </div>
               
-              <div className="z-20 relative bg-white">
+              <div className="z-20 relative bg-[#eeecec]">
                 <h6 className="text-sm font-semibold text-gray-800 truncate">{product.name}</h6>
                 <h6 className="text-sm text-gray-600 mt-2">${product.price}</h6>
               </div>
