@@ -1,27 +1,25 @@
+import { Link } from "react-router-dom";
+
 export default function ProductsCard({ products }) {
   return (
     <div className="font-[sans-serif] bg-[#eeecec] p-4 mx-auto w-full h-full max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%] 2xl:max-w-[70%]">
-      
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         {products.map((product) => (
-          <div key={product.id} className="group overflow-hidden cursor-pointer relative">
+          <Link key={product.id} to={`/product/${product.id}`} className="group overflow-hidden cursor-pointer relative">
             <div className="bg-gray-100 w-full overflow-hidden">
               <img
-                src={product.images?.[0]} 
+                src={product.images?.[0] || "/placeholder.jpg"} 
                 alt={product.name}
                 className="aspect-[3/4] w-full object-cover object-top hover:scale-110 transition-all duration-700"
               />
             </div>
-            
             <div className="p-4 relative">
-              <div
-                className="flex flex-wrap justify-between gap-2 w-full absolute px-4 pt-3 z-10
+              <div className="flex flex-wrap justify-between gap-2 w-full absolute px-4 pt-3 z-10
                 transition-all duration-500 left-0 right-0 group-hover:bottom-20
                 lg:bottom-5 lg:opacity-0 lg:bg-white lg:group-hover:opacity-100
-                max-lg:bottom-20 max-lg:py-3 max-lg:bg-white/60"
-              >
+                max-lg:bottom-20 max-lg:py-3 max-lg:bg-white/60">
                 <button type="button" title="Add to wishlist" className="bg-transparent outline-none border-none">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="fill-gray-800 w-5 h-5 inline-block" viewBox="0 0 64 64">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="fill-sky-500 w-5 h-5 inline-block" viewBox="0 0 64 64">
                     <path d="M45.5 4A18.53 18.53 0 0 0 32 9.86A18.5 18.5 0 0 0 0 22.5C0 40.92 29.71 59 31 59.71a2 2 0 0 0 2.06 0C34.29 59 64 40.92 64 22.5A18.52 18.52 0 0 0 45.5 4Z" />
                   </svg>
                 </button>
@@ -31,13 +29,12 @@ export default function ProductsCard({ products }) {
                   </svg>
                 </button>
               </div>
-              
               <div className="z-20 relative bg-[#eeecec]">
                 <h6 className="text-sm font-semibold text-gray-800 truncate">{product.name}</h6>
                 <h6 className="text-sm text-gray-600 mt-2">${product.price}</h6>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

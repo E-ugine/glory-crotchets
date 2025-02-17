@@ -13,6 +13,7 @@ export default function Home(){
         <h1 className="text-4xl text-sky-500 justify-center text-center  font-serif">Our Services</h1>
         <Services />
         <Footer />
+        
         </>
     )
 }
