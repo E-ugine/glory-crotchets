@@ -19,7 +19,15 @@ const cartSlice = createSlice({
       }
     },
     removeFromCart: (state, action) => {
-      state.cartItems = state.cartItems.filter((item) => item.id !== action.payload);
+      const itemIndex = state.cartItems.findIndex((item) => item.id === action.payload);
+
+      if (itemIndex !== -1) {
+        if (state.cartItems[itemIndex].quantity > 1) {
+          state.cartItems[itemIndex].quantity -= 1;
+        } else {
+          state.cartItems.splice(itemIndex, 1);
+        }
+      }
     },
     updateQuantity: (state, action) => {
       const { id, quantity } = action.payload;

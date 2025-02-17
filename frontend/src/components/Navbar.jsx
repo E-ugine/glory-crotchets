@@ -1,19 +1,17 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { ShoppingCart, User, Home, Package, Menu, X, Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const [cartCount] = useState(3);
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
-  const handleShopClick = () => {
-    navigate("/products");
-  };
+  // Get the cart items from Redux store (with default empty array)
+  const cartItems = useSelector((state) => state.cart?.items || []);
 
-  const handleHomeClick = () => {
-    navigate("/");
-  };
+  // Calculate total quantity of items in the cart
+  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <nav className="bg-[#eeecec] shadow-md px-8 py-3">
@@ -35,14 +33,14 @@ const Navbar = () => {
         </button>
 
         {/* Center - Navigation Links (Hidden on Mobile) */}
-        <ul className={`md:flex md:space-x-8 text-gray-600 absolute md:relative  w-full md:w-auto left-0 top-14 md:top-0 p-5 md:p-0 shadow-md md:shadow-none transition-all duration-300 z-50 ${isOpen ? "block" : "hidden"}`}>
+        <ul className={`md:flex md:space-x-8 text-gray-600 absolute md:relative w-full md:w-auto left-0 top-14 md:top-0 p-5 md:p-0 shadow-md md:shadow-none transition-all duration-300 z-50 ${isOpen ? "block" : "hidden"}`}>
           <li className="flex items-center space-x-1 cursor-pointer hover:text-black">
             <Home size={18} />
-            <button onClick={handleHomeClick} >Home</button>
+            <button onClick={() => navigate("/")}>Home</button>
           </li>
           <li className="flex items-center space-x-1 cursor-pointer hover:text-black">
             <Package size={18} />
-            <button onClick={handleShopClick}>Shop</button>
+            <button onClick={() => navigate("/products")}>Shop</button>
           </li>
         </ul>
 
@@ -58,17 +56,23 @@ const Navbar = () => {
             <Search size={18} className="absolute left-3 top-2.5 text-gray-500" />
           </div>
 
-          {/* Cart Icon with Black Background */}
-          <div className="relative cursor-pointer bg-black p-2 rounded-full">
-            <ShoppingCart size={22} color="white" />
-            {cartCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-pink-400 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
-                {cartCount}
-              </span>
-            )}
-          </div>
+          {/* Cart Icon with Dynamic Count */}
+        {/* Cart Icon with Dynamic Count */}
+<div className="relative cursor-pointer bg-black p-2 rounded-full" onClick={() => navigate("/cart")}>
+  <div className="relative">
+    <ShoppingCart size={22} color="white" />
+    
+    {/* Cart Count Badge (inside icon) */}
+    {cartCount > 0 && (
+      <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-pink-400 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+        {cartCount}
+      </span>
+    )}
+  </div>
+</div>
 
-          {/* User Profile with Black Background */}
+
+          {/* User Profile */}
           <div className="cursor-pointer bg-black p-2 rounded-full">
             <User size={22} color="white" />
           </div>
