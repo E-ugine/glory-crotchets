@@ -5,7 +5,7 @@ export default function ProductsCard({ products }) {
     <div className="font-[sans-serif] bg-[#eeecec] p-4 mx-auto w-full h-full max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%] 2xl:max-w-[70%]">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         {products.map((product) => (
-          <Link key={product.id} to={`/product/${product.id}`} className="group overflow-hidden cursor-pointer relative">
+          <Link key={product.id} to={`/products/${product.id}`} className="group overflow-hidden cursor-pointer relative">
             <div className="bg-gray-100 w-full overflow-hidden">
               <img
                 src={product.images?.[0] || "/placeholder.jpg"} 
