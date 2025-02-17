@@ -2,7 +2,7 @@
 import Products from "./Products"
 import Services from "../components/Services"
 import Reviews from "./Reviews"
-import Footer from "../components/Footer"
+
 
 export default function Home(){
     return(
@@ -12,8 +12,6 @@ export default function Home(){
         <Products />
         <h1 className="text-4xl text-sky-500 justify-center text-center  font-serif">Our Services</h1>
         <Services />
-        <Footer />
-        
         </>
     )
 }
