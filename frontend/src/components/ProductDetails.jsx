@@ -2,24 +2,39 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchProduct } from "../redux/productSlice"; 
 import { useParams } from "react-router-dom";
+import { addToCart } from "../redux/cartSlice"; // Import addToCart action
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const product = useSelector((state) => state.products.product); 
+  const product = useSelector((state) => state.products.product);
   const loading = useSelector((state) => state.products.loading);
   const error = useSelector((state) => state.products.error);
+  
+  // Fix: Correct cartItems reference
+  const cartItems = useSelector((state) => state.cart.cartItems || []); 
 
   useEffect(() => {
     dispatch(fetchProduct(id));
   }, [dispatch, id]);
 
+  // Fix: Ensure cartItems is always an array
+  const isInCart = cartItems?.some((item) => item.id === product?.id) ?? false;
+
+  const handleAddToCart = () => {
+    if (!isInCart && product) {
+      dispatch(addToCart({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        images: product.images,
+      }));
+    }
+  };
+
   if (loading) return <div className="text-center">Loading...</div>;
   if (error) return <div className="text-center text-red-500">{error}</div>;
-
-  if (!product) {
-    return <div className="text-center text-red-500">Product not found</div>;
-  }
+  if (!product) return <div className="text-center text-red-500">Product not found</div>;
 
   return (
     <div className="font-[sans-serif] p-4">
@@ -70,11 +85,21 @@ const ProductDetail = () => {
 
             <div className="mt-6">
               <div className="flex gap-4">
-                <button type="button" className="px-4 py-3 w-full border border-gray-800 bg-gray-800 hover:bg-transparent hover:text-gray-800 text-white text-sm font-semibold transition-all duration-300">
-                  Add to cart
+                <button 
+                  type="button" 
+                  className={`px-4 py-3 w-full border text-sm font-semibold transition-all duration-300 ${
+                    isInCart
+                      ? "bg-gray-400 border-gray-400 text-white cursor-not-allowed"
+                      : "border-gray-800 bg-gray-800 hover:bg-transparent hover:text-gray-800 text-white"
+                  }`}
+                  onClick={handleAddToCart}
+                  disabled={isInCart}
+                >
+                  {isInCart ? "Added to Cart" : "Add to Cart"}
                 </button>
               </div>
             </div>
+
           </div>
         </div>
       </div>

@@ -55,8 +55,6 @@ const Navbar = () => {
             />
             <Search size={18} className="absolute left-3 top-2.5 text-gray-500" />
           </div>
-
-          {/* Cart Icon with Dynamic Count */}
         {/* Cart Icon with Dynamic Count */}
 <div className="relative cursor-pointer bg-black p-2 rounded-full" onClick={() => navigate("/cart")}>
   <div className="relative">
