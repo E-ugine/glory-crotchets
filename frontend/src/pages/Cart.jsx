@@ -9,7 +9,7 @@ const Cart = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="font-sans max-w-5xl max-md:max-w-xl mx-auto bg-white py-4">
+    <div className="font-sans max-w-10xl max-md:max-w-xl mx-auto bg-[#eeecec] py-4">
       <h1 className="text-3xl font-bold text-gray-800 text-center">Shopping Cart</h1>
 
       {cart.length === 0 ? (
@@ -73,7 +73,7 @@ const Cart = () => {
 
           {/* Summary Section */}
           <div className="space-y-8 mt-4 max-md:mt-8">
-            <div className="border p-6 rounded-md bg-gray-100 space-y-5">
+            <div className="border p-6 rounded-md bg-[#eeecec] space-y-5">
               <h2 className="font-semibold text-base text-gray-800">Summary</h2>
               <div className="flex items-center justify-between">
                 <p className="font-medium text-gray-600">Subtotal:</p>
@@ -93,14 +93,14 @@ const Cart = () => {
               </div>
             </div>
 
-            <button type="button" className="w-full py-4 font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-500 rounded-md">
+            <button type="button" className="w-full py-4 font-semibold text-white bg-sky-500 rounded-md">
               Make Payment
             </button>
 
             {/* Continue Shopping Button */}
             <button 
               type="button" 
-              className="w-full py-4 font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-500 rounded-md"
+              className="w-full py-4 font-semibold text-white bg-sky-500 rounded-md"
               onClick={() => navigate("/products")}
             >
               Continue Shopping
