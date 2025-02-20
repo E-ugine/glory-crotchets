@@ -1,14 +1,14 @@
 
 const Hero = () => {
   const images = [
-    "https://images.unsplash.com/photo-1552358155-515e264cb8b8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    "https://images.unsplash.com/photo-1698167219404-b2391c61966d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    "https://images.unsplash.com/photo-1735762020035-b01d8549a92e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    "https://images.unsplash.com/photo-1718433720603-326f60a3a7cf?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    "https://plus.unsplash.com/premium_photo-1669704098858-8cd103f4ac2e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-    "https://images.unsplash.com/photo-1550047849-607ede6975fe?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fHNvbWVvbmUlMjBvbiUyMGV5ZWdsYXNzfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODJ8fHNvbWVvbmUlMjBvbiUyMGV5ZWdsYXNzJTIwYWZyaWNhbnxlbnwwfHwwfHx8MA%3D%3D",
-    "https://images.unsplash.com/photo-1735762020040-06a024522b81?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNvbWVvbmUlMjBvbiUyMGV5ZWdsYXNzfGVufDB8fDB8fHww"
+    "https://i.pinimg.com/736x/11/ef/4b/11ef4bab9f55f7f24d01bf1d4eec4055.jpg",
+    "https://i.pinimg.com/736x/e6/32/f9/e632f9bfa914513430d52b0272468b26.jpg",
+    "https://i.pinimg.com/736x/b4/8e/73/b48e7322273dc7cc59a5debf58177ca9.jpg",
+    "https://i.pinimg.com/736x/d9/dc/8d/d9dc8d5b73986c927d3b33a518a4955b.jpg",
+    "https://i.pinimg.com/736x/d9/0c/d3/d90cd36cd551fc9d6203fb24952aa531.jpg",
+    "https://i.pinimg.com/736x/8e/6e/dc/8e6edca936c580cfcb5d146f70ea8436.jpg",
+    "https://i.pinimg.com/736x/e5/99/58/e59958bd4d85af780b3af868b2fb4c07.jpg",
+    "https://i.pinimg.com/736x/08/00/b2/0800b262eb9a2fb59ae6f35df8488623.jpg"
   ];
 
   return (
