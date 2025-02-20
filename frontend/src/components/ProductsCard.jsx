@@ -10,7 +10,7 @@ export default function ProductsCard({ products }) {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         {products.map((product) => (
           <div key={product.id} className="group overflow-hidden cursor-pointer relative">
-            <Link to={`/products/${product.id}`} className="block">
+            <Link to={`/product/${product.id}`} className="block">
               <div className="bg-gray-100 w-full overflow-hidden">
                 <img
                   src={product.images?.[0] || "/placeholder.jpg"}

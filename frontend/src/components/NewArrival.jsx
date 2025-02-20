@@ -9,6 +9,7 @@ export default function NewArrival() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [perPage, setPerPage] = useState(3); 
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart); 
@@ -26,6 +27,17 @@ export default function NewArrival() {
       });
   }, []);
 
+  useEffect(() => {
+    const updatePerPage = () => {
+      setPerPage(window.innerWidth <= 768 ? 2 : 3); 
+    };
+
+    updatePerPage(); 
+    window.addEventListener("resize", updatePerPage); 
+
+    return () => window.removeEventListener("resize", updatePerPage);
+  }, []);
+
   const handleAddToCart = (product) => {
     dispatch(addToCart(product)); 
     alert(`${product.name} added to cart!`);
@@ -38,8 +50,7 @@ export default function NewArrival() {
 
   return (
     <section className="mx-auto max-w-[1200px] px-5 py-2">
-      <h2 className="text-xl font-bold text-gray-800">New Arrivals</h2>
-      <Splide options={{ type: "loop", perPage: 3, gap: "1rem", autoplay: true }}>
+      <Splide options={{ type: "loop", perPage, gap: "1rem", autoplay: true }}>
         {products.map((product) => (
           <SplideSlide key={product.id}>
             <div className="flex flex-col items-center border p-4 shadow-sm">
