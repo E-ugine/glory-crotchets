@@ -55,7 +55,7 @@ export default function NewArrival() {
           <SplideSlide key={product.id}>
             <div className="flex flex-col items-center border p-4 shadow-sm">
               <img
-                className="w-full h-[250px] object-cover cursor-pointer"
+                className="w-full h-[250px] object-contain cursor-pointer"
                 src={product.images[0]}
                 alt={product.name}
                 onClick={() => handleProductClick(product.id)}
