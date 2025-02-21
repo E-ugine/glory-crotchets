@@ -85,7 +85,7 @@ export default function Reviews() {
                       key={index}
                       className={`w-4 ${
                         index < review.rating
-                          ? "fill-blue-600"
+                          ? "fill-yellow-600"
                           : "fill-[#CED5D8]"
                       }`}
                       viewBox="0 0 14 13"

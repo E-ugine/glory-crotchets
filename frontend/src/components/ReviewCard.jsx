@@ -22,7 +22,7 @@ export default function ReviewsCard({ reviews }) {
                         </div>
                     </div>
                     {/* Review Comment */}
-                    <p className="mt-3 text-gray-700">{review.comment}</p>
+                    <p className="mt-3 text-red-700">{review.comment}</p>
                     {/* Purchased Product */}
                     {review.product_name && (
                         <p className="mt-3 text-sm text-blue-600 font-medium">

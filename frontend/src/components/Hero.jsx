@@ -1,44 +1,25 @@
-
 const Hero = () => {
-  const images = [
-    "https://i.pinimg.com/736x/11/ef/4b/11ef4bab9f55f7f24d01bf1d4eec4055.jpg",
-    "https://i.pinimg.com/736x/e6/32/f9/e632f9bfa914513430d52b0272468b26.jpg",
-    "https://i.pinimg.com/736x/b4/8e/73/b48e7322273dc7cc59a5debf58177ca9.jpg",
-    "https://i.pinimg.com/736x/d9/dc/8d/d9dc8d5b73986c927d3b33a518a4955b.jpg",
-    "https://i.pinimg.com/736x/d9/0c/d3/d90cd36cd551fc9d6203fb24952aa531.jpg",
-    "https://i.pinimg.com/736x/8e/6e/dc/8e6edca936c580cfcb5d146f70ea8436.jpg",
-    "https://i.pinimg.com/736x/e5/99/58/e59958bd4d85af780b3af868b2fb4c07.jpg",
-    "https://i.pinimg.com/736x/08/00/b2/0800b262eb9a2fb59ae6f35df8488623.jpg"
-  ];
-
   return (
-    <section className="hero-container">
-      
-      {/* Hero Content */}
-      <div className="hero-content">
-        <h1>Capturing the vibe,<br /> Freezing the moment</h1>
-        <p>Specialized in nurturing amazing pictures and moments you would always remember</p>
-        <a href="#" className="cta-button">Send Us A Message</a>
+    <div className="bg-[url('img/BG.png')] bg-cover bg-no-repeat w-full h-screen px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-center lg:justify-around text-center lg:text-left">
+      <div className="max-w-lg">
+        <h1 className="font-lemon text-4xl md:text-5xl text-black capitalize leading-tight">
+          get fresh <span className="text-[#ef5e41]">juiceables</span> everyday
+        </h1>
+        <p className="font-opensans text-base md:text-lg text-gray-800 py-4 md:py-6">
+          starting at $360 per month, get those benefits and more.
+        </p>
+        <button className="font-opensans-bold text-white text-lg w-32 md:w-36 h-12 md:h-16 rounded-[50px_0px_50px_0px] bg-[#ef5e41] border-none">
+          Details
+        </button>
       </div>
-      
-      {/* Image Carousel */}
-      <div className="carousel-container">
-        <div className="carousel-track">
-          {images.map((src, index) => (
-            <div
-              key={index}
-              className="carousel-card"
-              style={{ 
-                transform: `rotateY(${index * (360 / images.length)}deg) translateZ(220px)`,
-                margin: "0 10px"
-              }}
-            >
-              <img src={src} alt={`Gallery ${index}`} className="carousel-image" />
-            </div>
-          ))}
-        </div>
+      <div className="w-60 md:w-96 lg:w-[500px] h-60 md:h-96 lg:h-[500px] mt-8 lg:mt-0">
+        <img
+          src="https://i.pinimg.com/736x/4c/69/37/4c69377b89fa2eb91f3194bafa682ac4.jpg"
+          alt="juice"
+          className="w-full h-full object-cover rounded-xl"
+        />
       </div>
-    </section>
+    </div>
   );
 };
 
