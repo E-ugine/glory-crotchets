@@ -9,11 +9,11 @@ export default function Home(){
     return(
         <>
         <Hero />
-        <Services />
+        {/* <Services />
         <h1 className="text-4xl text-[#b87333] justify-center text-center  font-serif">New Arrivals</h1>
         <NewArrival />
         <Deals />
-        <Reviews />
+        <Reviews /> */}
         </>
     )
 }

@@ -15,9 +15,9 @@ export default function ProductsCard({ products }) {
     sort: "default",
   });
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
-  const [viewMode, setViewMode] = useState("grid"); // grid or list view
+  const [viewMode, setViewMode] = useState("grid"); 
 
-  // Available categories and counts (dynamically calculated)
+
   const categories = [
     { name: "Bedroom", count: products.filter(p => p.category === "bedroom").length || 12 },
     { name: "Sofa", count: products.filter(p => p.category === "sofa").length || 15 },
@@ -25,7 +25,7 @@ export default function ProductsCard({ products }) {
     { name: "Outdoor", count: products.filter(p => p.category === "outdoor").length || 124 }
   ];
 
-  // Available brands and counts (dynamically calculated)
+
   const brands = [
     { name: "APEX", count: products.filter(p => p.brand === "APEX").length || 12 },
     { name: "Call of SOFA", count: products.filter(p => p.brand === "Call of SOFA").length || 15 },
@@ -36,11 +36,11 @@ export default function ProductsCard({ products }) {
   const sizes = ["XS", "S", "M", "L", "XL"];
   const colors = ["gray", "purple", "darkred"];
 
-  // Update filter handler
+
   const handleFilterChange = (filterType, value) => {
     setFilters(prevFilters => {
       if (filterType === "categories" || filterType === "brands" || filterType === "sizes" || filterType === "colors") {
-        // Toggle array values
+       
         const currentValues = [...prevFilters[filterType]];
         const index = currentValues.indexOf(value);
         
@@ -53,12 +53,12 @@ export default function ProductsCard({ products }) {
         return { ...prevFilters, [filterType]: currentValues };
       }
       
-      // Handle other filter types
+     
       return { ...prevFilters, [filterType]: value };
     });
   };
 
-  // Apply filters
+
   const filteredProducts = products
     .filter((product) =>
       filters.categories.length > 0 ? filters.categories.includes(product.category) : true
@@ -79,7 +79,7 @@ export default function ProductsCard({ products }) {
       filters.colors.length > 0 ? filters.colors.some(color => product.colors?.includes(color)) : true
     );
 
-  // Apply sorting
+
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     if (filters.sort === "priceLow") return a.price - b.price;
     if (filters.sort === "priceHigh") return b.price - a.price;
@@ -87,7 +87,7 @@ export default function ProductsCard({ products }) {
     return 0;
   });
 
-  // Toggle mobile filter
+
   const toggleMobileFilter = () => {
     setIsMobileFilterOpen(!isMobileFilterOpen);
   };
@@ -245,6 +245,8 @@ export default function ProductsCard({ products }) {
         </div>
 
         {/* Product Grid */}
+
+
         <div className={`${isMobileFilterOpen ? 'hidden md:block' : 'block'} md:w-3/4 lg:w-4/5`}>
   <div className={`grid ${viewMode === 'grid' ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-1'} gap-4`}>
     {sortedProducts.map((product) => (
@@ -263,12 +265,11 @@ export default function ProductsCard({ products }) {
             - 25% OFF
           </div>
           
-          {/* Image with Fixed Aspect Ratio */}
-          <div className="aspect-w-1 aspect-h-1">
+          <div className="">
             <img
               src={product.images?.[0] || "/placeholder.jpg"}
               alt={product.name}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110"
             />
           </div>
         </Link>
@@ -276,7 +277,6 @@ export default function ProductsCard({ products }) {
         {/* Product Details */}
         <div className={`p-4 ${viewMode === 'list' ? 'w-2/3 flex flex-col justify-between' : ''}`}>
           <div>
-            {/* Product Name */}
             <h3 className="text-gray-900 font-semibold uppercase truncate">{product.name}</h3>
 
             {/* Price & Discount */}
