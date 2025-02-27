@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import { useState } from "react";
-import Filter from "../components/Filter"
+
 
 export default function ProductsCard({ products }) {
   const dispatch = useDispatch();
@@ -36,10 +36,9 @@ export default function ProductsCard({ products }) {
   return (
     <div className="flex w-full max-w-[90%] sm:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%] 2xl:max-w-[70%] mx-auto p-4 bg-[#eeecec]">
       {/* Sidebar (Filters) */}
-      <Filter filters={filters} setFilters={setFilters} />
 
       {/* Products Grid */}
-      <div className="w-3/4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 p-4">
+      <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 p-4">
         {sortedProducts.map((product) => (
           <div key={product.id} className="group overflow-hidden cursor-pointer relative">
             <Link to={`/product/${product.id}`} className="block">

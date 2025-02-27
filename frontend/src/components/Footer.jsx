@@ -61,7 +61,7 @@ export default function Footer(){
         </div>
 
         <div className="max-lg:min-w-[140px]">
-          <h4 className="text-sky-500 font-semibold text-base relative max-sm:cursor-pointer">Services</h4>
+          <h4 className="text-[#b87333] font-semibold text-base relative max-sm:cursor-pointer">Services</h4>
 
           <ul className="mt-6 space-y-4">
             <li>
@@ -82,7 +82,7 @@ export default function Footer(){
 
 
         <div className="max-lg:min-w-[140px]">
-          <h4 className="text-sky-500 font-semibold text-base relative max-sm:cursor-pointer">Company</h4>
+          <h4 className="text-[#b87333] font-semibold text-base relative max-sm:cursor-pointer">Company</h4>
 
           <ul className="space-y-4 mt-6">
             <li>
@@ -98,7 +98,7 @@ export default function Footer(){
         </div>
 
         <div className="max-lg:min-w-[140px]">
-          <h4 className="text-sky-500 font-semibold text-base relative max-sm:cursor-pointer">Additional</h4>
+          <h4 className="text-[#b87333] font-semibold text-base relative max-sm:cursor-pointer">Additional</h4>
 
           <ul className="space-y-4 mt-6">
             <li>

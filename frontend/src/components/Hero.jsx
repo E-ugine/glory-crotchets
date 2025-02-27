@@ -15,7 +15,7 @@ const Navigate = useNavigate();
         <p className="font-opensans text-base md:text-lg text-gray-800 py-4 md:py-6">
         🔥Handmade is the new luxury. 🧶 Knots, loops, and endless possibilities.
         </p>
-        <button onClick={handleClick} className="font-opensans-bold text-white text-lg w-32 md:w-36 h-12 md:h-16 rounded-[50px_0px_50px_0px] bg-[#ef5e41] border-none">
+        <button onClick={handleClick} className="font-opensans-bold text-white text-lg w-32 md:w-36 h-12 md:h-16 rounded-[50px_0px_50px_0px] bg-[#b87333] border-none">
           Shop Now
         </button>
       </div>
