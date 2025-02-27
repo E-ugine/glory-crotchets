@@ -3,17 +3,20 @@ import Services from "../components/Services"
 import Reviews from "./Reviews"
 import Deals from "../components/Deals"
 import NewArrival from "../components/NewArrival"
+import FeaturedProducts from "../components/FeaturedProducts"
 
 
 export default function Home(){
     return(
         <>
         <Hero />
-        {/* <Services />
+        <Services />
         <h1 className="text-4xl text-[#b87333] justify-center text-center  font-serif">New Arrivals</h1>
         <NewArrival />
         <Deals />
-        <Reviews /> */}
+        <h1 className="text-4xl text-[#b87333] justify-center text-center  font-serif">Featured Products</h1>
+        <FeaturedProducts />
+        <Reviews />
         </>
     )
 }
