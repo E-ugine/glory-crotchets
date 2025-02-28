@@ -73,39 +73,49 @@ const Cart = () => {
 
           {/* Summary Section */}
           <div className="space-y-8 mt-4 max-md:mt-8">
-            <div className="border p-6 rounded-md bg-[#eeecec] space-y-5">
-              <h2 className="font-semibold text-base text-gray-800">Summary</h2>
-              <div className="flex items-center justify-between">
-                <p className="font-medium text-gray-600">Subtotal:</p>
-                <p className="font-semibold text-lg text-gray-800">
-                  ${cart.reduce((total, item) => total + item.price * item.quantity, 0)}
-                </p>
-              </div>
-              <div className="flex items-center justify-between">
-                <p className="font-medium text-gray-600">Shipping:</p>
-                <p className="font-semibold text-lg text-gray-800">Free</p>
-              </div>
-              <div className="flex items-center justify-between">
-                <p className="font-medium text-gray-600">Total:</p>
-                <p className="font-semibold text-lg text-gray-800">
-                  ${cart.reduce((total, item) => total + item.price * item.quantity, 0)}
-                </p>
-              </div>
-            </div>
+  {/* Summary Box */}
+  <div className="border p-6 rounded-md bg-[#eeecec] space-y-5 shadow-md">
+    <h2 className="font-semibold text-base text-gray-800">Summary</h2>
 
-            <button type="button" className="w-full py-4 font-semibold text-white bg-sky-500 rounded-md">
-              Make Payment
-            </button>
+    <div className="flex items-center justify-between">
+      <p className="font-medium text-gray-600">Subtotal:</p>
+      <p className="font-semibold text-lg text-gray-800">
+        ${cart.reduce((total, item) => total + item.price * item.quantity, 0)}
+      </p>
+    </div>
 
-            {/* Continue Shopping Button */}
-            <button 
-              type="button" 
-              className="w-full py-4 font-semibold text-white bg-sky-500 rounded-md"
-              onClick={() => navigate("/products")}
-            >
-              Continue Shopping
-            </button>
-          </div>
+    <div className="flex items-center justify-between">
+      <p className="font-medium text-gray-600">Shipping:</p>
+      <p className="font-semibold text-lg text-gray-800">Free</p>
+    </div>
+
+    <div className="flex items-center justify-between border-t pt-4">
+      <p className="font-medium text-gray-600">Total:</p>
+      <p className="font-semibold text-lg text-gray-800">
+        ${cart.reduce((total, item) => total + item.price * item.quantity, 0)}
+      </p>
+    </div>
+  </div>
+
+  {/* Buttons Section */}
+  <div className="flex justify-between space-x-4">
+    <button 
+      type="button" 
+      className="w-1/2 py-4 font-semibold text-white bg-sky-500 rounded-md hover:bg-sky-600 transition"
+    >
+      Make Payment
+    </button>
+
+    <button 
+      type="button" 
+      className="w-1/2 py-4 font-semibold text-white bg-sky-500 rounded-md hover:bg-sky-600 transition"
+      onClick={() => navigate("/products")}
+    >
+      Continue Shopping
+    </button>
+  </div>
+</div>
+
         </div>
       )}
     </div>

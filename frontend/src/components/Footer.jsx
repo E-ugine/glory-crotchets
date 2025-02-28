@@ -1,6 +1,6 @@
 export default function Footer(){
     return(
-      <footer className="font-sans tracking-wide bg-[#eeecec] px-10 pt-12 pb-6">
+      <footer className="font-sans tracking-wide bg-neutral-900 px-10 pt-12 pb-6">
       <div className="flex flex-wrap justify-between gap-10">
         <div className="max-w-md">
           <a href='javascript:void(0)'>

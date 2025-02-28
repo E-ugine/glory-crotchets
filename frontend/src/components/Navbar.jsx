@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { ShoppingCart, User, Home, Package, Menu, X, Search } from "lucide-react";
+import { ShoppingCart, User, Home, Package, Menu, X, Search, Heart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -56,9 +56,14 @@ const Navbar = () => {
             <Package size={18} />
             <button>Shop</button>
           </li>
+          <li className="flex items-center space-x-1 cursor-pointer hover:text-black" onClick={() => navigate("/about")}>
+            <User size={18} />
+            <button>My Account</button>
+          </li>
+          <div className="mt-0 bg-sky-500 px-4 py-2 duration-100">Sign Up</div>
         </ul>
 
-        {/* Right - Search Bar, Cart, Profile */}
+        {/* Right - Search Bar, Wishlist, Cart */}
         <div className="hidden md:flex items-center space-x-4">
           {/* Search Bar */}
           <div className="relative">
@@ -71,21 +76,24 @@ const Navbar = () => {
             <Search size={18} className="absolute left-3 top-2.5 text-gray-500" />
           </div>
 
-          {/* Cart Icon with Dynamic Count */}
-          <div className="relative cursor-pointer bg-black p-2 rounded-full" onClick={() => navigate("/cart")}>
-            <ShoppingCart size={22} color="white" />
-            {cartCount > 0 && (
-              <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-pink-400 
-                text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full"
-              >
-                {cartCount}
-              </span>
-            )}
-          </div>
+          {/* Wishlist & Cart Icons */}
+          <div className="flex items-center space-x-4">
+            {/* Wishlist Icon */}
+            <div className="cursor-pointer" onClick={() => navigate("/wishlist")}>
+              <Heart size={26} className="text-red-500 hover:text-red-700" />
+            </div>
 
-          {/* User Profile Button */}
-          <div className="cursor-pointer bg-black p-2 rounded-full" onClick={() => navigate("/profile")}>
-            <User size={22} color="white" />
+            {/* Cart Icon with Dynamic Count */}
+            <div className="relative cursor-pointer" onClick={() => navigate("/cart")}>
+              <ShoppingCart size={26} className="text-black hover:text-gray-700" />
+              {cartCount > 0 && (
+                <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-pink-400 
+                  text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full"
+                >
+                  {cartCount}
+                </span>
+              )}
+            </div>
           </div>
         </div>
       </div>
