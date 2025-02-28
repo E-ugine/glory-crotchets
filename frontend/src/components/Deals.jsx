@@ -9,7 +9,7 @@ export default function Deals() {
 
   return (
     <div className="mx-auto max-w-[1200px] px-5">
-      <section className="mt-10 flex flex-col md:flex-row max-w-[1200px] justify-between bg-[#b87333] px-5">
+      <section className="mt-10 flex flex-col md:flex-row max-w-[1200px] justify-between bg-sky-500 px-5">
         <div className="py-8 px-3 lg:px-16 text-center md:text-left">
           <p className="text-white">ONLINE EXCLUSIVE</p>
           <h2 className="pt-6 text-5xl font-bold text-yellow-400">15% OFF</h2>

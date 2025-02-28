@@ -29,7 +29,7 @@ const Navbar = () => {
         
         {/* Left - Logo */}
         <div className="flex items-center space-x-2 cursor-pointer" onClick={() => navigate("/")}>
-          <span className="text-2xl font-semibold text-[#b87333] font-serif italic">
+          <span className="text-2xl font-semibold text-sky-500 font-serif italic">
             GloryCrotchet
           </span>
         </div>

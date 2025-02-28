@@ -18,7 +18,7 @@ const Products = () => {
 
   return (
     <div>
-      <h1 className="text-4xl text-[#b87333] justify-center text-center  font-serif mt-2">SHOP NOW</h1>
+      <h1 className="text-4xl text-sky-500 justify-center text-center  font-serif mt-2">SHOP NOW</h1>
       <ProductsCard products={products} />
     </div>
   );

@@ -306,7 +306,7 @@ export default function ProductsCard({ products }) {
               e.preventDefault();
               dispatch(addToCart(product));
             }}
-            className="mt-4 w-full bg-[#b87333] text-white py-2 px-4 rounded transition duration-300 self-end"
+            className="mt-4 w-full bg-sky-500 text-white py-2 px-4 rounded transition duration-300 self-end"
           >
             Add to cart
           </button>

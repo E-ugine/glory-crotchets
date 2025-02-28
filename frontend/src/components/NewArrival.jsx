@@ -65,7 +65,7 @@ export default function NewArrival() {
                 <p className="font-medium text-yellow-900">${product.price?.toFixed(2)}</p>
                 <button
                   onClick={() => handleAddToCart(product)}
-                  className="my-5 h-10 w-full bg-[#b87333] text-white"
+                  className="my-5 h-10 w-full bg-sky-500 text-white"
                 >
                   Add to Cart
                 </button>

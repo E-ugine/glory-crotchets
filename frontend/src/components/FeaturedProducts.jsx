@@ -39,7 +39,7 @@ export default function FeaturedProducts() {
                                 <p className="font-medium text-yellow-900">${product.price?.toFixed(2)}</p>
                                 <button
                                     onClick={() => handleAddToCart(product)}
-                                    className="my-3 h-10 w-full bg-[#b87333] text-white rounded-md"
+                                    className="my-3 h-10 w-full bg-sky-500 text-white rounded-md"
                                 >
                                     Add to Cart
                                 </button>
@@ -55,7 +55,7 @@ export default function FeaturedProducts() {
             <div className="flex justify-center mt-6">
                 <button
                     onClick={() => navigate("/products")} 
-                    className="bg-[#b87333] text-white font-semibold px-6 py-3 rounded-md hover:bg-yellow-600 transition"
+                    className="bg-sky-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-yellow-600 transition"
                 >
                     View All Products
                 </button>

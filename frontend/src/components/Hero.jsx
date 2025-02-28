@@ -22,7 +22,7 @@ const Hero = () => {
          
           <button
             onClick={handleClick}
-            className="mt-6 bg-yellow-500 text-black font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-300"
+            className="mt-6 bg-sky-500 text-black font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-300"
           >
             Explore Products
           </button>

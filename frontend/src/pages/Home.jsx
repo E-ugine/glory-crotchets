@@ -11,10 +11,10 @@ export default function Home(){
         <>
         <Hero />
         <Services />
-        <h1 className="text-4xl text-[#b87333] justify-center text-center  font-serif">New Arrivals</h1>
+        <h1 className="text-4xl text-sky-500 justify-center text-center  font-serif">New Arrivals</h1>
         <NewArrival />
         <Deals />
-        <h1 className="text-4xl text-[#b87333] justify-center text-center  font-serif">Featured Products</h1>
+        <h1 className="text-4xl text-sky-500 justify-center text-center  font-serif">Featured Products</h1>
         <FeaturedProducts />
         <Reviews />
         </>
