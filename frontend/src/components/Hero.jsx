@@ -1,30 +1,42 @@
 import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
-const Navigate = useNavigate();
+  const Navigate = useNavigate();
 
   const handleClick = () => {
     Navigate("/products");
   };
 
   return (
-    <div className="bg-[url('img/BG.png')] bg-cover bg-no-repeat w-full h-screen px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-center lg:justify-around text-center lg:text-left">
-      <div className="max-w-lg">
-        <h1 className="font-lemon text-4xl md:text-5xl text-black capitalize leading-tight">
-        Stitching love  <span className="text-[#ef5e41]">into</span> every loop. 🌿 Where yarn meets art.
-        </h1>
-        <p className="font-opensans text-base md:text-lg text-gray-800 py-4 md:py-6">
-        🔥Handmade is the new luxury. 🧶 Knots, loops, and endless possibilities.
-        </p>
-        <button onClick={handleClick} className="font-opensans-bold text-white text-lg w-32 md:w-36 h-12 md:h-16 rounded-[50px_0px_50px_0px] bg-[#b87333] border-none">
-          Shop Now
-        </button>
-      </div>
-      <div className="w-60 md:w-96 lg:w-[500px] h-60 md:h-96 lg:h-[500px] mt-8 lg:mt-0">
-        <img
-          src="https://i.pinimg.com/736x/4c/69/37/4c69377b89fa2eb91f3194bafa682ac4.jpg"
-          alt="juice"
-          className="w-full h-full object-cover rounded-xl"
-        />
+    <div className="bg-neutral-900 min-h-screen flex items-center mt-2">
+      <div className="max-w-7xl mx-auto px-6 xl:px-0 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="lg:w-1/2 text-center lg:text-left">
+          <h1 className="font-semibold text-white text-4xl md:text-5xl lg:text-6xl leading-tight">
+            <span className="text-sky-500">GLORY CROTCHET:</span> Where Yarn, <br></br> Meets Art.
+          </h1>
+          <p className="mt-5 text-neutral-400 text-lg">
+          GloryCrotchet is a haven where creativity intertwines with craftsmanship to bring intricate designs to life.
+           At GloryCrotchet, we specialize in transforming threads into timeless pieces, weaving passion and artistry into every stitch.
+            Whether through delicate patterns, bespoke crochet creations, or innovative textile designs, we craft beauty that tells a story.
+          </p>
+         
+          <button
+            onClick={handleClick}
+            className="mt-6 bg-yellow-500 text-black font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-300"
+          >
+            Explore Products
+          </button>
+        </div>
+
+        {/* Image Section */}
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <img
+            src="https://i.pinimg.com/736x/a3/62/dd/a362dd2de7fa40d60ffcae9591160a09.jpg"
+            alt="Preline Agency"
+            className="rounded-lg shadow-lg w-full max-w-[600px] lg:max-w-[700px]"
+          />
+        </div>
+
       </div>
     </div>
   );

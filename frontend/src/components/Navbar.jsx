@@ -1,26 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { ShoppingCart, User, Home, Package, Menu, X, Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
-
- 
+  
   const cartItems = useSelector((state) => state.cart?.cartItems || []);
-
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="bg-[#eeecec] shadow-md px-8 py-3">
-      <div className="flex items-center justify-between">
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 shadow-md 
+      ${isScrolled ? "bg-white bg-opacity-90 backdrop-blur-md shadow-lg" : "bg-[#eeecec]"}`}
+    >
+      <div className="px-8 py-3 flex items-center justify-between">
+        
         {/* Left - Logo */}
         <div className="flex items-center space-x-2 cursor-pointer" onClick={() => navigate("/")}>
-          {/* <div className="bg-pink-200 p-2 rounded-full">
-            <img src="/logo.svg" alt="Logo" className="w-5 h-5" />
-          </div> */}
-           <span className="text-2xl font-semibold text-[#b87333] font-serif italic">GloryCrotchet</span>
+          <span className="text-2xl font-semibold text-[#b87333] font-serif italic">
+            GloryCrotchet
+          </span>
         </div>
 
         {/* Mobile Menu Button */}
@@ -33,7 +44,10 @@ const Navbar = () => {
         </button>
 
         {/* Center - Navigation Links */}
-        <ul className={`md:flex md:space-x-8 text-gray-600 absolute md:relative w-full md:w-auto left-0 top-14 md:top-0 px-6 py-5 md:p-0 shadow-md md:shadow-none transition-all duration-300 z-50 bg-white md:bg-transparent ${isOpen ? "block" : "hidden"}`}>
+        <ul className={`md:flex md:space-x-8 text-gray-600 absolute md:relative w-full md:w-auto left-0 top-14 md:top-0 
+          px-6 py-5 md:p-0 shadow-md md:shadow-none transition-all duration-300 z-50 bg-white md:bg-transparent
+          ${isOpen ? "block" : "hidden"}`}
+        >
           <li className="flex items-center space-x-1 cursor-pointer hover:text-black" onClick={() => navigate("/")}>
             <Home size={18} />
             <button>Home</button>
@@ -61,7 +75,9 @@ const Navbar = () => {
           <div className="relative cursor-pointer bg-black p-2 rounded-full" onClick={() => navigate("/cart")}>
             <ShoppingCart size={22} color="white" />
             {cartCount > 0 && (
-              <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-pink-400 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+              <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-pink-400 
+                text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full"
+              >
                 {cartCount}
               </span>
             )}
