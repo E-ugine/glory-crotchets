@@ -7,10 +7,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
-  // Get the cart items from Redux store
+ 
   const cartItems = useSelector((state) => state.cart?.cartItems || []);
 
-  // Calculate total quantity of items in the cart
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
@@ -18,10 +17,10 @@ const Navbar = () => {
       <div className="flex items-center justify-between">
         {/* Left - Logo */}
         <div className="flex items-center space-x-2 cursor-pointer" onClick={() => navigate("/")}>
-          <div className="bg-pink-200 p-2 rounded-full">
+          {/* <div className="bg-pink-200 p-2 rounded-full">
             <img src="/logo.svg" alt="Logo" className="w-5 h-5" />
-          </div>
-          <span className="text-lg font-semibold text-gray-800">GloryCrotchet</span>
+          </div> */}
+           <span className="text-2xl font-semibold text-[#b87333] font-serif italic">GloryCrotchet</span>
         </div>
 
         {/* Mobile Menu Button */}

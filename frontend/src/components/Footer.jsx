@@ -4,7 +4,7 @@ export default function Footer(){
       <div className="flex flex-wrap justify-between gap-10">
         <div className="max-w-md">
           <a href='javascript:void(0)'>
-            <img src="https://readymadeui.com/readymadeui.svg" alt="logo" className='w-36' />
+            <img src="" alt="logo" className='w-36' />
           </a>
           <div className="mt-6">
             <p className="text-gray-600 leading-relaxed text-sm">Glory Crochet is a handmade crochet brand specializing in unique, high-quality, and stylish crochet designs, including clothing, accessories, and home décor. The craftsmanship blends creativity with tradition,
