@@ -61,7 +61,7 @@ export default function NewArrival() {
                 onClick={() => handleProductClick(product.id)}
               />
               <div className="text-center">
-                <p className="mt-2 font-semibold text-yellow-500">{product.name}</p>
+                <p className="mt-2 font-semibold text-neutral-900">{product.name}</p>
                 <p className="font-medium text-yellow-900">${product.price?.toFixed(2)}</p>
                 <button
                   onClick={() => handleAddToCart(product)}

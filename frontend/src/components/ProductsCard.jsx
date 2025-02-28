@@ -261,7 +261,7 @@ export default function ProductsCard({ products }) {
           className={`${viewMode === 'list' ? 'w-1/3' : 'w-full'} relative block overflow-hidden group`}
         >
           {/* Discount Badge */}
-          <div className="absolute top-2 right-2 bg-amber-400 text-sm font-semibold px-2 py-1 z-10">
+          <div className="absolute top-2 right-2 bg-sky-500 text-sm font-semibold px-2 py-1 z-10">
             - 25% OFF
           </div>
           
@@ -290,7 +290,7 @@ export default function ProductsCard({ products }) {
               {[...Array(5)].map((_, i) => (
                 <svg 
                   key={i} 
-                  className={`w-4 h-4 ${i < 4 ? 'text-yellow-400' : 'text-gray-300'} fill-current`} 
+                  className={`w-4 h-4 ${i < 4 ? 'text-sky-500' : 'text-gray-300'} fill-current`} 
                   viewBox="0 0 20 20"
                 >
                   <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />

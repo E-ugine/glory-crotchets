@@ -37,7 +37,7 @@ export default function Reviews() {
                 ></path>
               </svg>
             </div>
-            <div className="bg-yellow-600 w-10 h-10 grid items-center justify-center rounded-full -rotate-90 shrink-0 cursor-pointer">
+            <div className="bg-sky-600 w-10 h-10 grid items-center justify-center rounded-full -rotate-90 shrink-0 cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-3 fill-[#fff] inline"
@@ -85,7 +85,7 @@ export default function Reviews() {
                       key={index}
                       className={`w-4 ${
                         index < review.rating
-                          ? "fill-yellow-600"
+                          ? "fill-sky-600"
                           : "fill-[#CED5D8]"
                       }`}
                       viewBox="0 0 14 13"
