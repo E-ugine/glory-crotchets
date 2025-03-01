@@ -56,11 +56,11 @@ const Navbar = () => {
             <Package size={18} />
             <button>Shop</button>
           </li>
-          <li className="flex items-center space-x-1 cursor-pointer hover:text-black" onClick={() => navigate("/about")}>
+          <li className="flex items-center space-x-1 cursor-pointer hover:text-black" onClick={() => navigate("/user")}>
             <User size={18} />
             <button>My Account</button>
           </li>
-          <div className="mt-0 bg-sky-500 px-4 py-2 duration-100">Sign Up</div>
+          <div className="mt-0 bg-sky-500 px-4 py-2 duration-100 cursor-pointer">Sign Up</div>
         </ul>
 
         {/* Right - Search Bar, Wishlist, Cart */}
