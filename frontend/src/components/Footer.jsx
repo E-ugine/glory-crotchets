@@ -132,7 +132,7 @@ export default function Footer(){
           </li>
         </ul>
 
-        <p className='text-gray-600 text-sm md:ml-auto'>© GloryCrotchets. All rights reserved.</p>
+        <p className='text-gray-600 text-sm md:ml-auto'>© Glorycrochets. All rights reserved.</p>
       </div>
     </footer>
     )

@@ -30,7 +30,7 @@ const Navbar = () => {
         {/* Left - Logo */}
         <div className="flex items-center space-x-2 cursor-pointer" onClick={() => navigate("/")}>
           <span className="text-2xl font-semibold text-sky-500 font-serif italic">
-            GloryCrotchet
+            Glorycrochet
           </span>
         </div>
 
