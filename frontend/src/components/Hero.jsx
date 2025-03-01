@@ -16,12 +16,6 @@ const Hero = () => {
           <h1 className="font-bold text-white text-4xl sm:text-5xl md:text-6xl leading-tight">
             <span className="text-sky-500">GLORY CROCHET:</span> Where Yarn, <br className="hidden sm:block" /> Meets Art.
           </h1>
-
-          <p className="mt-4 text-neutral-300 text-lg sm:text-xl leading-relaxed">
-            GloryCrochet is a haven where creativity intertwines with craftsmanship to bring intricate designs to life.
-          </p>
-
-          {/* Button inside text section for better positioning */}
           <button
             onClick={handleClick}
             className="mt-6 bg-sky-500 text-black font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-300"
