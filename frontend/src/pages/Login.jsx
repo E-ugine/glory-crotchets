@@ -3,7 +3,20 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 export default function Login() {
     const [passwordVisible, setPasswordVisible] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const navigate = useNavigate(); // Initialize useNavigate
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Simulated login logic (Replace with API call)
+        if (email === "test@example.com" && password === "password123") {
+            alert("Login successful");
+            navigate("/");
+        } else {
+            alert("Invalid credentials");
+        }
+    };
 
     return (
         <section className="bg-neutral-900 min-h-screen flex box-border justify-center items-center">
@@ -14,12 +27,14 @@ export default function Login() {
                         If you already a member, easily log in now.
                     </p>
 
-                    <form className="flex flex-col gap-4">
+                    <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
                         <input
                             className="p-2 mt-8 rounded-xl border"
                             type="email"
                             name="email"
                             placeholder="Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                         <div className="relative">
                             <input
@@ -28,6 +43,8 @@ export default function Login() {
                                 name="password"
                                 id="password"
                                 placeholder="Password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -68,8 +85,6 @@ export default function Login() {
                             alt="Google login icon"
                         >
                             <path fill="#4285F4" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
-                            <path fill="#FBBC05" d="M6.306,14.691l6.543,4.797c1.775-3.528,5.5-6.036,9.651-6.036c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.282,4,9.584,8.239,6.306,14.691z" />
-                            <path fill="#EA4335" d="M24,44c6.235,0,11.685-2.386,15.849-6.26l-7.203-5.969c-2.128,1.428-4.703,2.265-7.646,2.265c-5.212,0-9.646-3.351-11.303-8H6.165v5.07C10.315,38.135,16.662,44,24,44z" />
                         </svg>
                         Sign Up with Google
                     </button>
