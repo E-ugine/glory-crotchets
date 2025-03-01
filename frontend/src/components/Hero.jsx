@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-neutral-900 min-h-screen flex items-center py-12">
+    <div className="bg-neutral-900 min-h-screen flex items-center py-12 mt-8">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-10">
 
         {/* Text Section */}
