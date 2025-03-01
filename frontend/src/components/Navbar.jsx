@@ -60,7 +60,23 @@ const Navbar = () => {
             <User size={18} />
             <button>My Account</button>
           </li>
-          <div className="mt-0 bg-sky-500 px-4 py-2 duration-100 cursor-pointer">Sign Up</div>
+
+          {/* Auth Links (Sign Up / Log In) */}
+          <div className="flex items-center space-x-2 border-l-2 border-gray-300 pl-3">
+            <button 
+              className="text-sky-500 hover:text-black font-medium" 
+              onClick={() => navigate("/login")}
+            >
+              Log In
+            </button>
+            <span className="text-gray-400">|</span>
+            <button 
+              className="text-sky-500 hover:text-black font-medium" 
+              onClick={() => navigate("/signup")}
+            >
+              Sign Up
+            </button>
+          </div>
         </ul>
 
         {/* Right - Search Bar, Wishlist, Cart */}
