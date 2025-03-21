@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchProduct } from "../redux/productSlice"; 
 import { useParams } from "react-router-dom";
-import { addToCart } from "../redux/cartSlice"; // Import addToCart action
+import { addToCart } from "../redux/cartSlice"; 
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
