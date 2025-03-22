@@ -2,6 +2,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, updateQuantity } from "../redux/cartSlice";
 import { useNavigate } from "react-router-dom"; 
 import { addToWishlist } from "../redux/wishlistSlice";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart.cartItems);
@@ -10,6 +12,7 @@ const Cart = () => {
 
   return (
     <div className="font-sans max-w-10xl max-md:max-w-xl mx-auto bg-[#eeecec] py-4">
+      <Navbar />
       <h1 className="text-3xl font-bold text-gray-800 text-center">Shopping Cart</h1>
 
       {cart.length === 0 ? (
@@ -118,6 +121,7 @@ const Cart = () => {
 
         </div>
       )}
+      <Footer />
     </div>
   );
 };

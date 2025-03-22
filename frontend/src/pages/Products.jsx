@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "../redux/productSlice";
 import ProductsCard from "../components/ProductsCard";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -18,8 +20,10 @@ const Products = () => {
 
   return (
     <div>
+      <Navbar />
       <h1 className="text-4xl text-sky-500 justify-center text-center  font-serif mt-2">SHOP NOW</h1>
       <ProductsCard products={products} />
+      <Footer />  
     </div>
   );
 };
