@@ -1,24 +1,23 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchProduct } from "../redux/productSlice"; 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { addToCart } from "../redux/cartSlice"; 
 
 const ProductDetail = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { id } = useParams();
   const product = useSelector((state) => state.products.product);
   const loading = useSelector((state) => state.products.loading);
   const error = useSelector((state) => state.products.error);
-  
-  // Fix: Correct cartItems reference
+
   const cartItems = useSelector((state) => state.cart.cartItems || []); 
 
   useEffect(() => {
     dispatch(fetchProduct(id));
   }, [dispatch, id]);
 
-  // Fix: Ensure cartItems is always an array
   const isInCart = cartItems?.some((item) => item.id === product?.id) ?? false;
 
   const handleAddToCart = () => {
@@ -39,6 +38,17 @@ const ProductDetail = () => {
   return (
     <div className="font-[sans-serif] p-4">
       <div className="lg:max-w-screen-lg max-w-xl mx-auto">
+        {/* Back arrow button */}
+        <button 
+          onClick={() => navigate(-1)}
+          className="mb-4 flex items-center text-gray-700 hover:text-gray-900 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          <span className="ml-1">Back</span>
+        </button>
+        
         <div className="grid items-start grid-cols-1 lg:grid-cols-5 gap-8 max-lg:gap-12 max-sm:gap-8">
           <div className="w-full lg:sticky top-0 lg:col-span-3">
             <div className="flex flex-col gap-2">
@@ -99,7 +109,6 @@ const ProductDetail = () => {
                 </button>
               </div>
             </div>
-
           </div>
         </div>
       </div>
